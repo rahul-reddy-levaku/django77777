@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <title>Document</title>
+</head>
+<body>
+   <div class="container" align="center">
+       {% if submitted %}
+       <h1>HELLO {{name}},thanks</h1>
+       {% else %}
+       <h1>Student Feedback Form</h1>
+       <form method="post">
+           {{form.as_p}}
+           {% csrf_token %}
+           <input type="submit"  value="Submit Feedback">
+       </form>
+       {% endif %}
+   </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<body>
+    <div class="container" align='center'>
+      <h1>Do you want to really delete book:{{book.title}}???</h1>
+      <form method="post">
+        {{form.as_p}}
+        {% csrf_token %}
+        <input type="submit" name="" class="btn btn-danger" value="Delete Book">
+        <a class="btn btn-success" href="/list2">Cancel(Don't Delete)</a>
+      </form>
+    </div>
+</body>
+</html>

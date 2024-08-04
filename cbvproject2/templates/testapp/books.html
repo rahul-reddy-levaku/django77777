@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <div class="container">
+      <h1>All books information from customized template file</h1>
+      {% for book in books %}
+      <li><a href="/{{book.id}}">{{book.title}}</a></li>
+      {% endfor %}
+      <li><a class="btn btn-primary" href="/create">Insert New Book</a></li>
+  </div>
+
+</body>
+</html>

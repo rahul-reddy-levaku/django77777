@@ -1,0 +1,33 @@
+<!DOCTYPE HTML >
+{% load static %}
+<html lang="en" dir="Itr">
+<head>
+    <meta charset=UTF-8">
+    <title>sunny news channel portal</title>
+    <link rel="stylesheet" href='{% static "css/demo.css" %}'>
+</head>
+  <body>
+  <h1>{{head_msg}}</h1>
+  <ul>
+    <li>{{sub1}}</li>
+    <li>{{sub2}}</li>
+    <li>{{sub3}}</li>
+  </ul>
+    {% if type == 'movies' %}
+    <img src= "{%static 'images/images1.jpeg'%}" >
+    <img src= "{%static 'images/images2.jpeg'%}" >
+    <img src= "{%static 'images/images3.jpeg'%}" >
+    {% elif type == 'sports' %}
+    <img src= "{%static 'images/images4.jpeg'%}" >
+    <img src= "{%static 'images/images5.jpeg'%}" >
+    <img src= "{%static 'images/images6.jpeg'%}" >
+    <img src= "{%static 'images/images4.gif'%}" >
+    {% elif type == 'politics' %}
+    <img src= "{%static 'images/images4.jpeg'%}" >
+    <img src= "{%static 'images/images5.jpeg'%}" >
+    <img src= "{%static 'images/images6.jpeg'%}" >
+    <img src= "{%static 'images/images4.gif'%}" >
+    {% endif %}
+  </body>
+
+</html>
